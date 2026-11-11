@@ -1,3 +1,6 @@
-/* variables.css | milik Bayu. Warna, font, dan jarak dari Figma. */
 :root {
-}
+       --warna-utama: #ec4899;
+       --warna-utama-terang: #f472b6;
+       --warna-utama-gelap: #be185d;
+       --font-utama: 'Poppins', sans-serif;
+   }
