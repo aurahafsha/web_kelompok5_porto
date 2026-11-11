@@ -1,0 +1,21 @@
+<?php
+/*
+ * SALIN dua bagian ini ke config/auth.php (menggantikan 'guards' dan 'providers' bawaan).
+ * Bagian lain di config/auth.php dibiarkan seperti semula.
+ *
+ * 'guards' => [
+ *     'web' => ['driver' => 'session', 'provider' => 'users'],
+ *
+ *     'siswa' => ['driver' => 'session', 'provider' => 'siswa'],
+ *     'admin' => ['driver' => 'session', 'provider' => 'admin'],
+ * ],
+ *
+ * 'providers' => [
+ *     'users' => ['driver' => 'eloquent', 'model' => App\Models\User::class],
+ *
+ *     'siswa' => ['driver' => 'eloquent', 'model' => App\Models\Siswa::class],
+ *     'admin' => ['driver' => 'eloquent', 'model' => App\Models\Admin::class],
+ * ],
+ *
+ * 'passwords' => [...] tetap seperti bawaan.
+ */

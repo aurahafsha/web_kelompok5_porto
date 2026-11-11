@@ -37,10 +37,20 @@ return [
     |
     */
 
-    'guards' => [
+        'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'siswa' => [
+            'driver' => 'session',
+            'provider' => 'siswa',
+        ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
         ],
     ],
 
@@ -61,16 +71,21 @@ return [
     |
     */
 
-    'providers' => [
+        'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', User::class),
+            'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'siswa' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Siswa::class,
+        ],
+
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
     ],
 
     /*
