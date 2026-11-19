@@ -1,6 +1,8 @@
 :root {
-       --warna-utama: #ec4899;
-       --warna-utama-terang: #f472b6;
-       --warna-utama-gelap: #be185d;
-       --font-utama: 'Poppins', sans-serif;
-   }
+    --warna-utama: #d4537e;
+    --warna-utama-terang: #f8c6dd;
+    --warna-teks: #4b1528;
+    --warna-latar: #ffffff;
+    --font-utama: 'Inter', sans-serif;
+    --radius-kartu: 12px;
+}
