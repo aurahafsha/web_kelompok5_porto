@@ -1,1 +1,138 @@
-/* pengunjung.css | milik Bayu. Aturan khusus role pengunjung. */
+body {
+    font-family: var(--font-utama);
+    background: var(--warna-latar);
+    margin: 0;
+}
+
+.navbar-landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+}
+
+.menu-landing {
+    display: flex;
+    gap: 28px;
+}
+
+.menu-landing a {
+    color: var(--warna-teks);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-landing a.aktif,
+.menu-landing a:hover {
+    color: var(--warna-utama);
+}
+
+.aksi-landing {
+    display: flex;
+    gap: 12px;
+}
+
+.tombol-putih {
+    background: #fff;
+    color: var(--warna-teks);
+    padding: 8px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.tombol-utama {
+    background: var(--warna-utama);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    min-height: 480px;
+    margin: 0 32px;
+    padding: 48px;
+    border-radius: 24px;
+    background: var(--warna-utama-terang);
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+    color: #4b0d2b;
+    margin: 0 0 16px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--warna-teks);
+    max-width: 440px;
+}
+
+.form-cari {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 440px;
+    padding: 6px 6px 6px 18px;
+    border-radius: 999px;
+    background: #fff;
+}
+
+.form-cari input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.hero-kanan {
+    position: relative;
+    height: 400px;
+}
+
+.hero-kiri {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ilustrasi-hero {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.kartu-stat {
+    position: absolute;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.kartu-stat strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--warna-utama);
+}
+
+.kartu-stat span {
+    font-size: 11px;
+    color: var(--warna-teks);
+}
+
+.kartu-atas { top: 40px; left: 0; }
+.kartu-bawah { bottom: 60px; left: 40px; }
