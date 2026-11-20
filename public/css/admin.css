@@ -1,1 +1,229 @@
-/* admin.css | milik Bayu. Aturan khusus role admin. */
+.admin-wrap {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+    background: #fdf2f8;
+}
+
+.admin-sidebar {
+    background: #fff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-right: 1px solid #fbcfe8;
+}
+
+.admin-logo {
+    font-weight: 600;
+    color: var(--warna-utama);
+    padding: 0 12px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-menu a {
+    color: var(--warna-teks);
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: var(--radius-kartu);
+    font-size: 14px;
+}
+
+.admin-menu a.aktif,
+.admin-menu a:hover {
+    background: #fce7f3;
+    color: var(--warna-utama);
+}
+
+.admin-keluar {
+    background: none;
+    border: none;
+    color: #ef4444;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.admin-konten {
+    padding: 32px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.admin-header h1 {
+    font-size: 22px;
+    margin: 0;
+    color: var(--warna-teks);
+}
+
+.admin-header p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.admin-profil {
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.kartu-ringkasan {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kartu-stat-admin {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.kartu-stat-admin span {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.kartu-stat-admin strong {
+    font-size: 26px;
+    color: var(--warna-teks);
+}
+
+.grid-grafik {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.kartu-besar {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.grid-grafik .kartu-besar {
+    margin-bottom: 0;
+}
+
+.judul-kartu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.judul-kartu h2 {
+    font-size: 16px;
+    margin: 0;
+    color: var(--warna-teks);
+}
+
+.judul-kartu p {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 4px 0 0;
+}
+
+.filter {
+    font-size: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+.legenda {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.legenda li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legenda span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.tabel-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabel-admin th,
+.tabel-admin td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #f3f4f6;
+    text-align: left;
+}
+
+.tabel-admin th {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--warna-status);
+}
+
+.tombol-aksi {
+    font-size: 12px;
+    color: var(--warna-utama);
+    text-decoration: none;
+    border: 1px solid #fbcfe8;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+.paginasi {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .admin-wrap,
+    .grid-grafik {
+        grid-template-columns: 1fr;
+    }
+
+    .kartu-ringkasan {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
