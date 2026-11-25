@@ -35,6 +35,7 @@ Route::middleware('guest:admin')->group(function () {
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/daftar', fn () => view('auth.daftar'))->name('daftar');
 
 /*
 |--------------------------------------------------------------------------
