@@ -33,19 +33,21 @@ class AuthController extends Controller
     }
 
     public function loginAdmin(Request $request)
-    {
-        $credentials = $request->validate([
-            'username' => ['required'],
-            'password' => ['required'],
-        ]);
+{
+    $credentials = $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
 
-        if (Auth::guard('admin')->attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended(route('admin.dashboard'));
-        }
-
-        return back()->withErrors(['username' => 'Username atau password salah.'])->onlyInput('username');
+    if (Auth::guard('admin')->attempt($credentials, $request->boolean('remember'))) {
+        $request->session()->regenerate();
+        return redirect()->intended(route('admin.dashboard'));
     }
+
+    return back()
+        ->withErrors(['email' => 'Email atau kata sandi belum sesuai. Periksa kembali lalu coba lagi.'])
+        ->onlyInput('email');
+}
 
     public function logout(Request $request)
     {
